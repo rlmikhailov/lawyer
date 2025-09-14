@@ -1,11 +1,72 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import HeroSection from '../components/HeroSection.astro';
+import FeaturesGrid from '../components/FeaturesGrid.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import ContactsMap from '../components/ContactsMap.astro';
+import Ratings from '../components/Ratings.astro';
+import ContactSidebar from '../components/ContactSidebar.astro';
+import Marquee from '../components/Marquee.astro';
 ---
+<html>
+  <body>
+    <Header />
+    <ContactSidebar />
+    <!-- rest of page content -->
+	 <HeroSection />
 
-<Layout>
-	<Welcome />
-</Layout>
+    <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Benefits">
+  Преимущества
+</div>
+
+  <Marquee text="Стаж более 15 лет!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Работаю на результат!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Могу найти решения в самых сложных ситуациях!" />
+
+	 <FeaturesGrid />
+
+   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Services">
+  Услуги
+</div>
+	 <ServicesGrid />
+   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Contacts">
+  Контакты
+</div>
+	 <ContactsMap />
+   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Ratings">
+  Отзывы
+</div>
+  <Ratings />
+<!-- Modal Popup with Google Form -->
+<dialog id="googleFormDialog" style="padding:0; border:none;">
+  <div style="position:relative; width:100%; height:640px; max-width:700px;">
+    <!-- Close Button -->
+    <button id="closeFormBtn"
+      style="position:absolute;top:16px;right:16px;font-size:1.5rem;z-index:2;">×</button>
+    <!-- Google Form Embed -->
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdKspomFw3X1LXku7w0586wsFD9qtcuQCgFkBEOTyljqGnpOA/viewform?usp=dialog"
+      width="100%" height="600"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      style="border-radius:10px;">
+      Загрузка…
+    </iframe>
+  </div>
+</dialog>
+<script>
+// Open modal when button is clicked
+document.getElementById('openFormBtn').onclick = () => {
+  document.getElementById('googleFormDialog').showModal();
+};
+// Close modal when close button is clicked
+document.getElementById('closeFormBtn').onclick = () => {
+  document.getElementById('googleFormDialog').close();
+};
+// Optional: allow closing modal by clicking backdrop
+document.getElementById('googleFormDialog').addEventListener('click', function(event) {
+  if (event.target === this) this.close();
+});
+</script>
+  </body>
+</html>
+

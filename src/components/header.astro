@@ -1,0 +1,165 @@
+<head>
+  <meta charset="UTF-8" />
+  <!-- other head content -->
+  <link rel="icon" href="https://iili.io/KIeStKG.th.png" type="image/png" />
+</head>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <img src="https://i.postimg.cc/PxwwzxDZ/advokat-yakutsk.png" alt="Адвокат Михайлов Л.Н." />
+      </a>
+    </div>
+
+    <div class="header-right">
+      <button class="call-btn" id="openFormBtn">Онлайн-консультация</button>
+      <button class="call-btn" type="button"><a href="tel:+79656769389">📞 +7 (965) 676-93‒89</a></button>
+      <button class="apply-btn" type="button"><a href="https://api.whatsapp.com/send/?phone=79656769389&text=Здравствуйте%21%0A%0AПишу+с+вашего+сайта.%0A%0A&type=phone_number&app_absent=0">✆ Whatsapp</a></button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </div>
+  <nav id="nav-menu" class="nav-menu">
+    <ul>
+      <li><a href="/#Services" onclick="closeMenu()">Услуги</a></li>
+      <li><a href="/#Ratings" onclick="closeMenu()">Отзывы</a></li>
+      <li><a href="/About" onclick="closeMenu()">Обо мне</a></li>
+      <li><a href="/#Contacts" onclick="closeMenu()">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+<style>
+  .header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo a {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #222;
+    text-decoration: none;
+  }
+  .logo img {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  .call-btn {
+    background: transparent;
+    color: #0077cc;
+    border: 0px solid #0077cc;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .call-btn:hover {
+    background: #eef6fb;
+  }
+  .apply-btn {
+    background: #2cb742;
+    color: #2cb742;
+    border: 2px solid #6ddc7f;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .apply-btn:hover {
+    background: #6ddc7f;
+  }
+  .menu-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 1rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 999;
+    padding: 1rem 1.5rem;
+    min-width: 180px;
+  }
+  .nav-menu.open {
+    display: block;
+    animation: fadeIn 0.2s;
+  }
+  .nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .nav-menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .nav-menu a:hover {
+    color: #0077cc;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px);}
+    to   { opacity: 1; transform: translateY(0);}
+  }
+  body {
+    padding-top: 60px;
+  }
+  a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+    window.closeMenu = function() {
+      navMenu.classList.remove('open');
+    }
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        navMenu.classList.remove('open');
+      }
+    });
+  });
+</script>

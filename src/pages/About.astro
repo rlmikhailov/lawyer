@@ -1,0 +1,67 @@
+---
+import Header from '../components/Header.astro';
+import ContactsMap from '../components/ContactsMap.astro';
+import ContactSidebar from '../components/ContactSidebar.astro';
+---
+<html>
+  <body>
+    <Header />
+    <ContactSidebar />
+    <!-- rest of page content -->
+     <div class="container">
+      <h1>Обо мне</h1>
+<p>Текст</p>
+<h2>Обо мне в СМИ</h2>
+<p class="p1"><a title="ПВР: В суде мы доказали свою правоту" href="https://xn--b1aze.xn--p1ai/news/article/v-sude-my-dokazali-svoyu-pravotu-18116?utm_source=chatgpt.com" target="_blank">Политическая партия &laquo;Партия Возрождения России&raquo;</a></p>
+<p class="p1"><a title="Любомир Михайлов: защитник Отечества &ndash; понятие круглосуточное" href="https://sakhalife.ru/lyubomir-mihajlov-zashhitnik-otechestva-ponyatie-kruglosutochnoe/" target="_blank">Сетевое издание &laquo;SAKHALIFE.RU&raquo;</a></p>
+<p class="p1"><a title="В Якутии Общероссийский народный фронт провел прием граждан по юридическим вопросам" href="https://ysia.ru/v-yakutii-obshherossijskij-narodnyj-front-provel-priem-grazhdan-po-yuridicheskim-voprosam/" target="_blank">Сетевое издание &laquo;Якутское-Саха Информационное Агентство (ЯСИА)</a></p>
+<p class="p1"><a title="Марха өрүс бэҕэһээҥҥи, бүгүҥҥү, сарсыҥҥы туруга" href="https://kiinkuorat.ru/articles/marha-r-s-be-e-ee-i-b-g-sarsy-y-turuga" target="_blank">Cетевое издание kiinkuorat.ru</a></p>
+<p class="p1"><a title="&laquo;Якутский фермер Кириллин наоборот помогал людям. Он взял работников из стационара &quot;Тирэх&quot;   Подробности: https://sakhaday.ru/news/yakutskiy-fermer-kirillin-naoborot-pomogal-lyudyam-on-vzyal-rabotnikov-iz-stacionara-tireh?from=copy" href="https://sakhaday.ru/news/yakutskiy-fermer-kirillin-naoborot-pomogal-lyudyam-on-vzyal-rabotnikov-iz-stacionara-tireh?from=copy" target="_blank">Сетевое издание "Sakhaday"</a></p>
+    </div>
+   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Contacts">
+  Контакты
+</div>
+	 <ContactsMap />
+<!-- Modal Popup with Google Form -->
+<dialog id="googleFormDialog" style="padding:0; border:none;">
+  <div style="position:relative; width:100%; height:640px; max-width:700px;">
+    <!-- Close Button -->
+    <button id="closeFormBtn"
+      style="position:absolute;top:16px;right:16px;font-size:1.5rem;z-index:2;">×</button>
+    <!-- Google Form Embed -->
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdKspomFw3X1LXku7w0586wsFD9qtcuQCgFkBEOTyljqGnpOA/viewform?usp=dialog"
+      width="100%" height="600"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      style="border-radius:10px;">
+      Загрузка…
+    </iframe>
+  </div>
+</dialog>
+<script>
+// Open modal when button is clicked
+document.getElementById('openFormBtn').onclick = () => {
+  document.getElementById('googleFormDialog').showModal();
+};
+// Close modal when close button is clicked
+document.getElementById('closeFormBtn').onclick = () => {
+  document.getElementById('googleFormDialog').close();
+};
+// Optional: allow closing modal by clicking backdrop
+document.getElementById('googleFormDialog').addEventListener('click', function(event) {
+  if (event.target === this) this.close();
+});
+</script>
+<style>
+  .container {
+    max-width: 900px;   /* регулируешь под себя */
+    margin: 0 auto;     /* центрирование */
+    padding: 0 20px;    /* небольшие отступы слева и справа */
+    line-height: 1.6;   /* читаемость текста */
+  }
+</style>
+  </body>
+</html>
+

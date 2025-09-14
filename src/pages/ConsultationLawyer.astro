@@ -1,0 +1,77 @@
+---
+import Header from '../components/Header.astro';
+import ContactsMap from '../components/ContactsMap.astro';
+import ContactSidebar from '../components/ContactSidebar.astro';
+---
+<html>
+  <body>
+    <Header />
+    <ContactSidebar />
+    <!-- rest of page content -->
+     <div class="container">
+      <h1 class="p1"><strong>Консультация юриста</strong></h1>
+<p class="p3">Юридическая консультация &mdash; это первый шаг к решению любой правовой проблемы. Часто своевременно полученный совет позволяет избежать ошибок, которые потом могут стоить свободы, денег, репутации, а самое главное времени и нервов.</p>
+<p class="p3">Моя задача &mdash; не просто ответить на ваши вопросы, а предложить конкретный план действий, оценить риски и дать практические рекомендации, которые вы сможете применить немедленно по каждому случаю.</p>
+<p class="p3">Я оказываю консультации по всем вопросам уголовного, гражданского и административного права. Независимо от того, на какой стадии находится дело &mdash; от первых проверочных мероприятий до судебного разбирательства или вопросов, связанных с исполнением наказания, &mdash; консультация позволяет определить стратегию и тактику защиты.</p>
+<p class="p3">Мой большой опыт, подтверждённый практикой и результатами, в сочетании с аналитическим складом ума позволяет рассматривать ситуацию как шахматную партию, где каждый шаг заранее просчитан.</p>
+<p class="p4"><strong>Форматы консультаций</strong></p>
+<ul class="ul1">
+<li class="li3"><strong>Устная консультация</strong> &mdash; по телефону или видеосвязи. Подходит для срочных случаев, когда нужно быстро понять алгоритм действий, права и риски.</li>
+<li class="li3"><strong>Очная консультация(лучше всего)</strong> &mdash; в офисе или в месте содержания под стражей. Такой формат удобен, если нужно изучить документы, подробно разобрать обстоятельства и подготовить письменные материалы.</li>
+</ul>
+<p class="p4"><strong>Что вы получите на консультации</strong></p>
+<ul class="ul1">
+<li class="li3">Профессиональную оценку ситуации с учётом действующего законодательства и судебной практики.</li>
+<li class="li3">Пошаговые рекомендации: как действовать сразу и какие перспективы у дела в дальнейшем.</li>
+<li class="li3">Разъяснение ваших процессуальных прав и обязанностей, чтобы вы могли уверенно принимать решения.</li>
+<li class="li3">Возможность составить план дальнейших действий: от подачи ходатайств и жалоб до выстраивания линии защиты в суде.</li>
+</ul>
+<p class="p2">&nbsp;</p>
+    </div>
+   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Contacts">
+  Контакты
+</div>
+	 <ContactsMap />
+<!-- Modal Popup with Google Form -->
+<dialog id="googleFormDialog" style="padding:0; border:none;">
+  <div style="position:relative; width:100%; height:640px; max-width:700px;">
+    <!-- Close Button -->
+    <button id="closeFormBtn"
+      style="position:absolute;top:16px;right:16px;font-size:1.5rem;z-index:2;">×</button>
+    <!-- Google Form Embed -->
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdKspomFw3X1LXku7w0586wsFD9qtcuQCgFkBEOTyljqGnpOA/viewform?usp=dialog"
+      width="100%" height="600"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      style="border-radius:10px;">
+      Загрузка…
+    </iframe>
+  </div>
+</dialog>
+<script>
+// Open modal when button is clicked
+document.getElementById('openFormBtn').onclick = () => {
+  document.getElementById('googleFormDialog').showModal();
+};
+// Close modal when close button is clicked
+document.getElementById('closeFormBtn').onclick = () => {
+  document.getElementById('googleFormDialog').close();
+};
+// Optional: allow closing modal by clicking backdrop
+document.getElementById('googleFormDialog').addEventListener('click', function(event) {
+  if (event.target === this) this.close();
+});
+</script>
+<style>
+  .container {
+    max-width: 900px;   /* регулируешь под себя */
+    margin: 0 auto;     /* центрирование */
+    padding: 0 20px;    /* небольшие отступы слева и справа */
+    line-height: 1.6;   /* читаемость текста */
+  }
+</style>
+  </body>
+</html>
+

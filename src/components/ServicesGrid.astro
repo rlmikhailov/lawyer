@@ -1,0 +1,171 @@
+---
+const services = [
+  {
+    title: "Адвокат по уголовным делам",
+    img: "https://i.postimg.cc/jjCNCtVP/2.png",
+    hoverImg: "https://i.postimg.cc/jjCNCtVP/2.png",
+    description: "Комплексная защита и сопровождение по уголовным делам любой сложности: по делам об убийстве, причинении вреда здоровью, насильственных действиях сексуального характера. Профессиональная помощь на всех этапах следствия и суда",
+    href: "/CriminalLawyer"
+  },
+  {
+    title: "Адвокат по АО",
+    img: "https://i.postimg.cc/SKhV5S3p/2.png",
+    hoverImg: "https://i.postimg.cc/SKhV5S3p/2.png",
+    description: "Возврат прав. Защита при лишении прав за алкогольное опьянение, при спорах по результатам/отказу от медосвидетельствования.",
+    href: "/DUILawyer"
+  },
+  {
+    title: "Адвокат по должностным преступлениям",
+    img: "https://iili.io/KIIALj1.th.png",
+    hoverImg: "https://iili.io/KIIALj1.th.png",
+    description: "Защита при уголовных делах, связанных с должностными преступлениями.",
+    href: "/MalfeasanceLawyer"
+  },
+  {
+    title: "Адвокат по ДТП",
+    img: "https://iili.io/KII1rF9.th.png",
+    hoverImg: "https://iili.io/KII1rF9.th.png",
+    description: "Адвокат по ДТП и административным делам: помощь пострадавшим и водителям, оспаривание протоколов ГИБДД, возврат прав, споры с ГАИ и страховыми компаниями.",
+    href: "/TrafficAccidentLawyer"
+  },
+  {
+    title: "Адвокат по гражданским делам",
+    img: "https://iili.io/KIIWLB4.md.png",
+    hoverImg: "https://iili.io/KIIWLB4.md.png",
+    description: "Консультации и сопровождение по наследственным, семейным, трудовым, земельным и жилищным вопросам. Подготовка документов и защита ваших интересов в суде - ваши права под надежной защитой.",
+    href: "/CivilLawyer"
+  },
+  {
+    title: "Адвокат по 228",
+    img: "https://iili.io/KIIkKx9.th.png",
+    hoverImg: "https://iili.io/KIIkKx9.th.png",
+    description: "Адвокат по наркотикам. Защита по уголовным делам, связанным с наркотиками. Богатая судебная практика и успешный опыт защиты на всех стадиях процесса.",
+    href: "/DrugLawyer"
+  },
+  {
+    title: "Адвокат по взяткам",
+    img: "https://iili.io/KIIUpyv.th.png",
+    hoverImg: "https://iili.io/KIIUpyv.th.png",
+    description: "Консультации и защита при обвинениях во взяточничестве.",
+    href: "/BribeLawyer"
+  },
+  {
+    title: "Адвокат по мошенничеству",
+    img: "https://iili.io/KIIP2OG.th.png",
+    hoverImg: "https://iili.io/KIIP2OG.th.png",
+    description: "Правовая помощь при делах о мошенничестве.",
+    href: "/FraudLawyer"
+  },
+  {
+    title: "Подача заявлений и ходатайств(УДО,перевод и различные)",
+    img: "https://iili.io/KIIQBTu.md.png",
+    hoverImg: "https://iili.io/KIIQBTu.md.png",
+    description: "Подача ходатайств на Условно-досрочное освобождение (УДО), замена неотбытой части наказания более мягким видом наказания, снятие судимости, жалобы и обращения в суд и надзорные инстанции.",
+    href: "/ProbationLawyer"
+  },
+  {
+    title: "Сопровождение на следственных действиях и в учреждениях исполнения наказаний",
+    img: "https://iili.io/KIIDfpt.md.png",
+    hoverImg: "https://iili.io/KIIDfpt.md.png",
+    description: "Сопровождение на следственных действиях и в учреждениях исполнения наказаний",
+    href: "/InvestigationLawyer"
+  },
+  {
+    title: "Консультация юриста",
+    img: "https://iili.io/KITJVs9.md.png",
+    hoverImg: "https://iili.io/KITJVs9.md.png",
+    description: "Профессиональные консультации по любым юридическим вопросам.",
+    href: "/ConsultationLawyer"
+  },
+  {
+    title: "Обжалование приговора: шанс на снижение срока или отмену наказания.",
+    img: "https://iili.io/KITfy1S.md.png",
+    hoverImg: "https://iili.io/KITfy1S.md.png",
+    description: "Помощь в обжаловании приговоров. Составим жалобу, представим ваши интересы в суде и добьёмся уменьшения срока, более мягкого наказания или отмены приговора.",
+    href: "/AppealLawyer"
+  }
+];
+---
+<section class="services-section">
+  <div class="container">
+    {services.map(service => (
+      <a href={service.href} class="service-item" style={`--bg: url('${service.img}'); --hover-bg: url('${service.hoverImg}');`} key={service.title}>
+        <div class="title">{service.title}</div>
+        <div class="popup-text">{service.description}</div>
+      </a>
+    ))}
+  </div>
+
+
+<style>
+  .services-section {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    color: #222; /* base text color */
+  }
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 2rem;
+  }
+  .service-item {
+    position: relative;
+    display: block;
+    height: 180px;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-image 0.4s ease;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .service-item:hover {
+    background-image: var(--hover-bg);
+  }
+  .title {
+    position: relative;
+    z-index: 2;
+  }
+  .popup-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 0 0 12px 12px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+  }
+  .service-item:hover .popup-text {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

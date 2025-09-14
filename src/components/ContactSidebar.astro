@@ -1,0 +1,48 @@
+---
+---
+
+<style>
+  .sidebar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    background-color: rgba(248, 249, 250, 0.7); /* Light background with transparency */
+    border-radius: 8px 0 0 8px;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  .sidebar:hover {
+    background-color: rgba(248, 249, 250, 1); /* Remove transparency on hover */
+  }
+  .sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;   /* Smaller size */
+    height: 40px;  /* Smaller size */
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Slightly smaller font */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+  }
+  .sidebar a:hover {
+    opacity: 1; /* full opacity on hover */
+  }
+  .sidebar a.phone { background-color: #28a745; }
+  .sidebar a.email { background-color: #17a2b8; }
+  .sidebar a.whatsapp { background-color: #25d366; }
+</style>
+
+<div class="sidebar" aria-label="Contact sidebar">
+  <a href="tel:+79656769389" class="phone" aria-label="Call phone" rel="nofollow noopener noreferrer">📞</a>
+  <a href="mailto:rl.mikhailov@mail.ru" class="email" aria-label="Send email" rel="nofollow noopener noreferrer">✉️</a>
+  <a href="https://api.whatsapp.com/send/?phone=79656769389&text=Здравствуйте%21%0A%0AПишу+с+вашего+сайта.%0A%0A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp chat">🟢</a>
+</div>

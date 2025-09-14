@@ -1,0 +1,116 @@
+---
+--- 
+<section class="features-grid">
+  <div class="container">
+    <div class="feature-item">
+      <div class="feature-image">
+  <img src="https://i.postimg.cc/3NGqNB2N/consult.png" alt="Юридическая консультация" />
+</div>
+      <div class="feature-text">
+        <h3>Юридическая консультация</h3>
+        <p>Консультация с практикующим адвокатом по телефону, в офисе или онлайн через мессенджеры (WhatsApp, Telegram, Max). Диагноз ситуации, план действий и конкретные шаги</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image"><img src="https://i.postimg.cc/9QPgnmYp/sakha.png" alt="Саха тыла" /></div>
+      <div class="feature-text">
+        <h3>Саха тыла</h3>
+        <p>Свободное владение якутским языком позволяет точно понять ситуацию клиента и вести переговоры без недопониманий. Это особенно важно для дел в Якутске и улусах, где правильная коммуникация и правильный перевод и понимание слов влияет на исход дела и комфорт клиента.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image">[Фото]</div>
+      <div class="feature-text">
+        <h3>Полная конфиденциальность</h3>
+        <p>Строгая защита адвокатской тайны и этических норм обеспечивает безопасность и сохранность информации.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image">[Фото]</div>
+      <div class="feature-text">
+        <h3>Безупречная репутация</h3>
+        <p>Положительные и реальные отзывы клиентов в 2GIS. Множество судебной практики - помогает доверителям увидеть реальный результат</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image">[Фото]</div>
+      <div class="feature-text">
+        <h3>Более 15 лет опыта - результат, проверенный временем.</h3>
+        <p>Опыт ведения дел различной сложности в Якутске и регионах по делам различной сложности.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image">[Фото]</div>
+      <div class="feature-text">
+        <h3>Профессиональный рост и актуальность знаний</h3>
+        <p>Регулярное повышение квалификации и участие в профильных семинарах — гарант того, что защита строится на современных правоприменительных практиках и свежих решениях.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.feature-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+  .features-grid {
+    padding: 2rem 1rem;
+    background: #fff;
+    color: #222;
+  }
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .feature-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .feature-image {
+    width: 64px;
+    height: 64px;
+    background: #eee;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 0.75rem;
+    user-select: none;
+  }
+  .feature-text h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  .feature-text p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+    .feature-item {
+      align-items: center;
+    }
+  }
+</style>
