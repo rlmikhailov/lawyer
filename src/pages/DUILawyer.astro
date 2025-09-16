@@ -68,7 +68,7 @@ import ContactSidebar from '../components/ContactSidebar.astro';
 <p class="p3">Права под угрозой &mdash; не откладывайте. Свяжитесь со мной по <a href="tel:+79656769389" title="Адвокат Якутск">телефону</a> или в <a href="https://api.whatsapp.com/send/?phone=79656769389&amp;text=Здравствуйте%21%0A%0AПишу+с+вашего+сайта.%0A%0A&amp;type=phone_number&amp;app_absent=0">WhatsApp</a>: я проведу экстренный анализ протокола и в течение рабочего дня предложу чёткий план действий.</p>
 <p class="p3"><b>Ключевые слова:</b><br />Адвокат по АО &mdash; возврат водительских прав при лишении за алкоголь и отказ от освидетельствования. Оспаривание алкотестов, жалобы в суд, возврат ВУ. Лишение прав за алкоголь, возврат прав, ст.12.8 КоАП, ст.12.26 КоАП, обжалование постановления 10 дней.</p>
 </div>
-   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Contacts">
+<div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты
 </div>
 	 <ContactsMap />
@@ -111,6 +111,20 @@ document.getElementById('googleFormDialog').addEventListener('click', function(e
     padding: 0 20px;    /* небольшие отступы слева и справа */
     line-height: 1.6;   /* читаемость текста */
   }
+  .divider {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #111; /* dark black text */
+  background: rgba(245 245 245 / 0.7); /* light greyish white with transparency */
+  border-radius: 16px;
+  padding: 20px 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1); /* subtle black shadow */
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(0 0 0 / 0.1); /* faint border */
+}
 </style>
   </body>
 </html>

@@ -1,5 +1,6 @@
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- other head content -->
   <link rel="icon" href="https://iili.io/KIeStKG.th.png" type="image/png" />
 </head>
@@ -13,9 +14,24 @@
     </div>
 
     <div class="header-right">
-      <button class="call-btn" id="openFormBtn">Онлайн-консультация</button>
-      <button class="call-btn" type="button"><a href="tel:+79656769389">📞 +7 (965) 676-93‒89</a></button>
-      <button class="apply-btn" type="button"><a href="https://api.whatsapp.com/send/?phone=79656769389&text=Здравствуйте%21%0A%0AПишу+с+вашего+сайта.%0A%0A&type=phone_number&app_absent=0">✆ Whatsapp</a></button>
+      <button class="call-btn" id="openFormBtn">
+  <span class="desktop-text">🛜 Обратиться</span>
+  <span class="mobile-text">🛜</span>
+</button>
+
+      <button class="call-btn" type="button">
+        <a href="tel:+79656769389">
+          <span class="desktop-text">📞 +7 (965) 676-93‒89</span>
+          <span class="mobile-text">📞</span>
+  </a>
+</button>
+      <button class="apply-btn" type="button">
+  <a href="https://api.whatsapp.com/send/?phone=79656769389&text=Здравствуйте%21%0A%0AПишу+с+вашего+сайта.%0A%0A&type=phone_number&app_absent=0" style="color: #fff; text-decoration: none;">
+    <span class="desktop-text">✆ Whatsapp</span>
+    <span class="mobile-text">✆ WA</span>
+  </a>
+</button>
+
       <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     </div>
   </div>
@@ -29,120 +45,178 @@
   </nav>
 </header>
 <style>
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.header-right button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 18px;
+  margin: 0 8px 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  background: rgba(255 255 255 / 0.3);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-right button:hover {
+  background: rgba(255 255 255 / 0.5);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
+  color: #000;
+}
+
+/* Special styles for WhatsApp button */
+.header-right .apply-btn {
+  background-color: #25D366;
+  color: #fff;
+  font-weight: 700;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-right .apply-btn:hover {
+  background-color: #1ebe57;
+  box-shadow: 0 6px 16px rgb(37 211 102 / 0.7);
+  color: #fff;
+}
+
+/* Anchor tag inside buttons inherit text styles */
+.header-right button a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+.menu-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.open {
+  display: block;
+  position: fixed;
+  top: 60px;
+  right: 1rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 999;
+  padding: 1rem 1.5rem;
+  min-width: 180px;
+  animation: fadeIn 0.2s;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+body {
+  padding-top: 60px;
+  margin: 0;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 700px) {
   .header {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    height: 60px;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    width: 100%;
+    height: auto;
+    padding: 0 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .container {
-    max-width: 1024px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 100%;
+    padding: 0;
   }
-  .logo a {
-    font-weight: bold;
-    font-size: 1.25rem;
-    color: #222;
-    text-decoration: none;
-  }
-  .logo img {
-    height: 40px; /* Adjust size as needed */
-    width: auto;
+  .logo {
+    margin: 0.5rem 0 0.25rem 0;
   }
   .header-right {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.3rem;
+    margin: 0.25rem 0 0.5rem 0;
   }
-  .call-btn {
-    background: transparent;
-    color: #0077cc;
-    border: 0px solid #0077cc;
-    border-radius: 5px;
-    padding: 8px 16px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .call-btn:hover {
-    background: #eef6fb;
-  }
-  .apply-btn {
-    background: #2cb742;
-    color: #2cb742;
-    border: 2px solid #6ddc7f;
-    border-radius: 5px;
-    padding: 8px 16px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .apply-btn:hover {
-    background: #6ddc7f;
+  .call-btn, .apply-btn {
+    font-size: 1em;
+    padding: 7px 12px;
   }
   .menu-toggle {
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 0.5rem;
+    display: inline-block;
   }
   .nav-menu {
+    right: 0.5rem;
+    left: unset;
+    min-width: 60vw;
+    padding: 0.7rem 1rem;
+  }
+}
+.mobile-text {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .desktop-text {
     display: none;
-    position: fixed;
-    top: 60px;
-    right: 1rem;
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    z-index: 999;
-    padding: 1rem 1.5rem;
-    min-width: 180px;
   }
-  .nav-menu.open {
-    display: block;
-    animation: fadeIn 0.2s;
+  .mobile-text {
+    display: inline;
   }
-  .nav-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .nav-menu a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
-    font-size: 1rem;
-  }
-  .nav-menu a:hover {
-    color: #0077cc;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-8px);}
-    to   { opacity: 1; transform: translateY(0);}
-  }
-  body {
-    padding-top: 60px;
-  }
-  a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
 }
 
 </style>

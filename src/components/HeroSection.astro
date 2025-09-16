@@ -15,8 +15,8 @@
       <br>
       Гарантируется полная конфиденциальность за счет строгого соблюдения адвокатской тайны и этических норм. Это обеспечивает надежную защиту всех предоставленных сведений и исключает возможность их несанкционированного раскрытия или утечки в обществе.</p>
       <div class="buttons">
-        <a href="#Contacts" class="btn-primary">Связаться</a>
-        <a href="#Services" class="btn-secondary">Услуги</a>
+        <a href="#Contacts" class="btn-primary">☎️ Связаться</a>
+        <a href="#Services" class="btn-secondary">💼 Услуги</a>
         <iframe frameborder="0" width="150px" height="50px" src="https://widget.2gis.ru/api/widget?org_id=70000001075317301&amp;branch_id=70000001075317302&amp;size=medium&amp;theme=light"></iframe>
       </div>
     </div>
@@ -111,6 +111,49 @@
   }
   a:link, a:visited, a:hover, a:active {
   text-decoration: none;
+}
+.buttons a.btn-primary,
+.buttons a.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 18px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #222;
+  background: rgba(255 255 255 / 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Primary button hover */
+.buttons a.btn-primary:hover {
+  background: rgba(255 255 255 / 0.5);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
+  color: #000;
+}
+
+/* Secondary button hover */
+.buttons a.btn-secondary:hover {
+  background: rgba(255 255 255 / 0.4);
+  box-shadow: 0 6px 14px rgb(0 0 0 / 0.12);
+  color: #111;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 700px) {
+  .buttons a.btn-primary,
+  .buttons a.btn-secondary {
+    padding: 8px 14px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
 }
 
 </style>
