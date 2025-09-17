@@ -15,7 +15,7 @@ import Marquee from '../components/Marquee.astro';
     <!-- rest of page content -->
 	 <HeroSection />
 
-    <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Benefits">
+    <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Benefits">
   Преимущества
 </div>
 
@@ -23,15 +23,15 @@ import Marquee from '../components/Marquee.astro';
 
 	 <FeaturesGrid />
 
-   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Services">
+   <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Services">
   Услуги
 </div>
 	 <ServicesGrid />
-   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Contacts">
+   <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты
 </div>
 	 <ContactsMap />
-   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Ratings">
+   <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Ratings">
   Отзывы
 </div>
   <Ratings />
@@ -67,6 +67,22 @@ document.getElementById('googleFormDialog').addEventListener('click', function(e
   if (event.target === this) this.close();
 });
 </script>
+<style>.divider {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #111; /* dark black text */
+  background: rgba(245 245 245 / 0.7); /* light greyish white with transparency */
+  border-radius: 16px;
+  padding: 20px 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1); /* subtle black shadow */
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(0 0 0 / 0.1); /* faint border */
+}
+
+</style>
   </body>
 </html>
 

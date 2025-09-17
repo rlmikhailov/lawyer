@@ -48,7 +48,7 @@ import ContactSidebar from '../components/ContactSidebar.astro';
 <p class="p2"><strong>&mdash; Можно ли договориться со следствием (сотрудничество)?</strong><br /> Возможны варианты сотрудничества и соглашения о сотрудничестве, но они требуют тонкой правовой оценки и гарантии интересов доверителя &mdash; это индивидуальное решение.</p>
 <p class="p2"><strong>&mdash; Какие сроки и риски по таким делам?</strong><br /> Сроки зависят от объёма доказательств и стадии: следствие и экспертизы &mdash; недели/месяцы; судебное рассмотрение &mdash; несколько месяцев и более. Санкции по статьям о взятках &mdash; существенные; прогноз даю только после изучения материалов дела.</p>
     </div>
-   <div style="font-size: 48px; font-weight: bold; text-align: center; color: #4a90e2; background-color: #e0f0ff; padding: 20px 40px;" id="Contacts">
+  <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты
 </div>
 	 <ContactsMap />
@@ -91,6 +91,20 @@ document.getElementById('googleFormDialog').addEventListener('click', function(e
     padding: 0 20px;    /* небольшие отступы слева и справа */
     line-height: 1.6;   /* читаемость текста */
   }
+  .divider {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #111; /* dark black text */
+  background: rgba(245 245 245 / 0.7); /* light greyish white with transparency */
+  border-radius: 16px;
+  padding: 20px 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1); /* subtle black shadow */
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(0 0 0 / 0.1); /* faint border */
+}
 </style>
   </body>
 </html>
