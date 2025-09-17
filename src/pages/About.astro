@@ -2,6 +2,55 @@
 import Header from '../components/Header.astro';
 import ContactsMap from '../components/ContactsMap.astro';
 import ContactSidebar from '../components/ContactSidebar.astro';
+import Carousel from '../components/Carousel.astro';
+
+const images = [
+  { src: '/images/AdvokatYakutsk1.jpeg', alt: 'Photo 1' },
+  { src: '/images/AdvokatYakutsk2.jpeg', alt: 'Photo 2' },
+  { src: '/images/AdvokatYakutsk3.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk4.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk5.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk6.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk7.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk8.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk9.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk10.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk11.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk12.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk13.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk14.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk15.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk16.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk17.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk18.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk19.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk20.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk21.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk22.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk23.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk24.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk25.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk26.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk27.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk28.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk29.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk30.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk31.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk32.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk33.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk34.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk35.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk36.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk37.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk38.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk39.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk40.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk41.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk42.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk43.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk44.jpeg', alt: 'Photo 3' },
+  { src: '/images/AdvokatYakutsk45.jpeg', alt: 'Photo 3' },
+];
 ---
 <html>
   <body>
@@ -9,7 +58,9 @@ import ContactSidebar from '../components/ContactSidebar.astro';
     <ContactSidebar />
     <!-- rest of page content -->
      <div class="container">
+      <br>
       <h1>Обо мне</h1>
+<Carousel images={images} />
 <p>Текст</p>
 <h2>Обо мне в СМИ</h2>
 <p class="p1"><a title="ПВР: В суде мы доказали свою правоту" href="https://xn--b1aze.xn--p1ai/news/article/v-sude-my-dokazali-svoyu-pravotu-18116?utm_source=chatgpt.com" target="_blank">Политическая партия &laquo;Партия Возрождения России&raquo;</a></p>

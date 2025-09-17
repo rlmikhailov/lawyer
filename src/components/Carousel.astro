@@ -1,0 +1,80 @@
+---
+// Carousel.astro
+const { images } = Astro.props;
+---
+
+<style>
+  .carousel {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+  }
+  .carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: none;
+  }
+  .carousel img.active {
+    display: block;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255 255 255 / 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+  }
+  .arrow:hover {
+    background: rgba(255 255 255 / 0.9);
+  }
+  .arrow.left {
+    left: 10px;
+  }
+  .arrow.right {
+    right: 10px;
+  }
+</style>
+
+<div class="carousel" id="carousel">
+  {images.map(({ src, alt }, i) => (
+    <img src={src} alt={alt} loading="lazy" class={i === 0 ? 'active' : ''} />
+  ))}
+  <div class="arrow left" role="button" tabindex="0">‹</div>
+  <div class="arrow right" role="button" tabindex="0">›</div>
+</div>
+
+<script type="module" client:load>
+  const carousel = document.getElementById('carousel');
+  const images = carousel.querySelectorAll('img');
+  const leftArrow = carousel.querySelector('.arrow.left');
+  const rightArrow = carousel.querySelector('.arrow.right');
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+    });
+  }
+
+  leftArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  rightArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+</script>
