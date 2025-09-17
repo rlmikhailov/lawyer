@@ -4,14 +4,11 @@
   <div class="container">
     <div class="text-content">
       <h1>Адвокат Михайлов Любомир Николаевич </h1>
-      <p>Предлагаю квалифицированную юридическая помощь по различным категориям дел на всех этапах — от первичной консультации до представления интересов в суде, обжалования решений и подач ходатайств. 
+      <p>Предлагаю квалифицированную юридическую помощь по различным категориям дел, на всех этапах — от первичной консультации до представления интересов в суде, обжалования решений и подач ходатайств. 
       <br>
-      <br>
-      Каждый случай рассматривается индивидуально с вниманием к деталям и разработкой стратегии, направленной на достижение максимального результата.
-      <br>
+      Каждый случай рассматривается индивидуально, с вниманием к деталям и разработкой стратегии направленной на достижении максимального результата.
       <br>
       Доверьте свою ситуацию профессионалу, который обеспечит уверенность и защиту на всех этапах процесса. Знание якутского языка позволяет мне оказывать помощь на родном языке доверителей, делая общение максимально комфортным и понятным.
-      <br>
       <br>
       Гарантируется полная конфиденциальность за счет строгого соблюдения адвокатской тайны и этических норм. Это обеспечивает надежную защиту всех предоставленных сведений и исключает возможность их несанкционированного раскрытия или утечки в обществе.</p>
       <div class="buttons">
@@ -155,5 +152,45 @@
     margin-right: 10px;
   }
 }
+.image-content {
+  max-width: 100%;
+  padding: 0 1rem; /* optional horizontal padding */
+  box-sizing: border-box;
+  text-align: center; /* center image if container is wider */
+}
 
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 8px; /* optional rounding */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional subtle shadow */
+}
+.text-content {
+  padding-top: 80px; /* adjust based on your header height */
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .text-content {
+    padding-top: 50px; /* more space if header is taller or fixed */
+  }
+}
+.text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #444;
+  white-space: pre-line; /* keep line breaks from <br> */
+}
 </style>
