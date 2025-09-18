@@ -5,11 +5,11 @@
     <div class="text-content">
       <h1>Адвокат Михайлов Любомир Николаевич </h1>
       <p>Предлагаю квалифицированную юридическую помощь по различным категориям дел, на всех этапах — от первичной консультации до представления интересов в суде, обжалования решений и подач ходатайств. 
-      <br>
+
       Каждый случай рассматривается индивидуально, с вниманием к деталям и разработкой стратегии направленной на достижении максимального результата.
-      <br>
+
       Доверьте свою ситуацию профессионалу, который обеспечит уверенность и защиту на всех этапах процесса. Знание якутского языка позволяет мне оказывать помощь на родном языке доверителей, делая общение максимально комфортным и понятным.
-      <br>
+      
       Гарантируется полная конфиденциальность за счет строгого соблюдения адвокатской тайны и этических норм. Это обеспечивает надежную защиту всех предоставленных сведений и исключает возможность их несанкционированного раскрытия или утечки в обществе.</p>
       <div class="buttons">
         <a href="#Contacts" class="btn-primary">☎️ Связаться</a>
@@ -25,15 +25,13 @@
 
 <style>
   .hero-section {
-  /* height: 100vh; */
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  box-sizing: border-box; /* Optional but recommended */
-  margin-bottom: 40px; /* Added space below the section */
-}
-
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
   .container {
     display: flex;
     width: 100%;
@@ -41,20 +39,31 @@
     margin: 0 auto;
     padding: 0 1rem;
     gap: 2rem;
+    box-sizing: border-box;
   }
   .text-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
   }
   .text-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #222;
   }
   .text-content p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    color: #444;
+    line-height: 1.5;
+    white-space: pre-line;
   }
   .buttons {
     display: flex;
@@ -65,7 +74,17 @@
     font-size: 1rem;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+    background: rgba(255 255 255 / 0.3);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
   }
   .btn-primary {
     background-color: #0077cc;
@@ -73,27 +92,33 @@
   }
   .btn-primary:hover {
     background-color: #005fa3;
-  }
-  .btn-secondary {
-    background-color: #eee;
-    color: #333;
+    background: rgba(255 255 255 / 0.5);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
+    color: #000;
   }
   .btn-secondary:hover {
-    background-color: #ccc;
+    background: rgba(255 255 255 / 0.4);
+    box-shadow: 0 6px 14px rgb(0 0 0 / 0.12);
+    color: #111;
   }
   .image-content {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    text-align: center;
   }
   .image-content img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-
+  
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
@@ -106,91 +131,25 @@
       font-size: 2rem;
     }
   }
-  a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
-}
-.buttons a.btn-primary,
-.buttons a.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 18px;
-  margin-right: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #222;
-  background: rgba(255 255 255 / 0.3);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-}
 
-/* Primary button hover */
-.buttons a.btn-primary:hover {
-  background: rgba(255 255 255 / 0.5);
-  box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
-  color: #000;
-}
-
-/* Secondary button hover */
-.buttons a.btn-secondary:hover {
-  background: rgba(255 255 255 / 0.4);
-  box-shadow: 0 6px 14px rgb(0 0 0 / 0.12);
-  color: #111;
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 700px) {
-  .buttons a.btn-primary,
-  .buttons a.btn-secondary {
-    padding: 8px 14px;
-    font-size: 14px;
-    margin-right: 10px;
+  @media (max-width: 700px) {
+    .buttons a.btn-primary,
+    .buttons a.btn-secondary {
+      padding: 8px 14px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .text-content {
+      padding-top: 50px;
+      max-width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    .container, .hero-section {
+      overflow-x: hidden;
+    }
   }
-}
-.image-content {
-  max-width: 100%;
-  padding: 0 1rem; /* optional horizontal padding */
-  box-sizing: border-box;
-  text-align: center; /* center image if container is wider */
-}
-
-.image-content img {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  border-radius: 8px; /* optional rounding */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional subtle shadow */
-}
-.text-content {
-  padding-top: 80px; /* adjust based on your header height */
-  max-width: 900px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 700px) {
-  .text-content {
-    padding-top: 50px; /* more space if header is taller or fixed */
-  }
-}
-.text-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.text-content p {
-  font-size: 1rem;
-  line-height: 1.2;
-  color: #444;
-  white-space: pre-line; /* keep line breaks from <br> */
-}
 </style>
