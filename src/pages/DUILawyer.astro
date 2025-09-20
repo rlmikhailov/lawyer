@@ -2,6 +2,16 @@
 import Header from '../components/Header.astro';
 import ContactsMap from '../components/ContactsMap.astro';
 import ContactSidebar from '../components/ContactSidebar.astro';
+import Carousel from '../components/Carousel.astro';
+
+const images = [
+  { src: '/images/advokatao1.png', alt: 'Photo 1' },
+  { src: '/images/advokatao1.2.png', alt: 'Photo 2' },
+  { src: '/images/advokatao1.3.png', alt: 'Photo 3' },
+  { src: '/images/advokatao2.png', alt: 'Photo 3' },
+  { src: '/images/advokatao2.2.png', alt: 'Photo 3' },
+  { src: '/images/advokatao2.3.png', alt: 'Photo 3' },
+];
 ---
 <html>
   <body>
@@ -68,6 +78,7 @@ import ContactSidebar from '../components/ContactSidebar.astro';
 <p class="p3">Права под угрозой &mdash; не откладывайте. Свяжитесь со мной по <a href="tel:+79656769389" title="Адвокат Якутск">телефону</a> или в <a href="https://api.whatsapp.com/send/?phone=79656769389&amp;text=Здравствуйте%21%0A%0AПишу+с+вашего+сайта.%0A%0A&amp;type=phone_number&amp;app_absent=0">WhatsApp</a>: я проведу экстренный анализ протокола и в течение рабочего дня предложу чёткий план действий.</p>
 <p class="p3"><b>Ключевые слова:</b><br />Адвокат по АО &mdash; возврат водительских прав при лишении за алкоголь и отказ от освидетельствования. Оспаривание алкотестов, жалобы в суд, возврат ВУ. Лишение прав за алкоголь, возврат прав, ст.12.8 КоАП, ст.12.26 КоАП, обжалование постановления 10 дней.</p>
 </div>
+<Carousel images={images} />
 <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты
 </div>

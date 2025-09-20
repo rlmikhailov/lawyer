@@ -2,6 +2,13 @@
 import Header from '../components/Header.astro';
 import ContactsMap from '../components/ContactsMap.astro';
 import ContactSidebar from '../components/ContactSidebar.astro';
+import Carousel from '../components/Carousel.astro';
+
+const images = [
+  { src: '/images/advokatvzyatka1.png', alt: 'Photo 1' },
+  { src: '/images/advokatvzyatka1.2.png', alt: 'Photo 2' },
+  { src: '/images/advokatvzyatka1.3.png', alt: 'Photo 3' },
+];
 ---
 <html>
   <body>
@@ -47,6 +54,7 @@ import ContactSidebar from '../components/ContactSidebar.astro';
 <p class="p2"><strong>&mdash; Что делать при вызове на допрос по делу о взятке?</strong><br /> Не ходить без адвоката; воспользоваться правом не давать показаний до консультации (ст. 51 Конституции РФ) и срочно связаться с защитником.</p>
 <p class="p2"><strong>&mdash; Можно ли договориться со следствием (сотрудничество)?</strong><br /> Возможны варианты сотрудничества и соглашения о сотрудничестве, но они требуют тонкой правовой оценки и гарантии интересов доверителя &mdash; это индивидуальное решение.</p>
 <p class="p2"><strong>&mdash; Какие сроки и риски по таким делам?</strong><br /> Сроки зависят от объёма доказательств и стадии: следствие и экспертизы &mdash; недели/месяцы; судебное рассмотрение &mdash; несколько месяцев и более. Санкции по статьям о взятках &mdash; существенные; прогноз даю только после изучения материалов дела.</p>
+<Carousel images={images} />
     </div>
   <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты

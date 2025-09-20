@@ -2,6 +2,12 @@
 import Header from '../components/Header.astro';
 import ContactsMap from '../components/ContactsMap.astro';
 import ContactSidebar from '../components/ContactSidebar.astro';
+import Carousel from '../components/Carousel.astro';
+
+const images = [
+  { src: '/images/podacha1.png', alt: 'Photo 1' },
+  { src: '/images/podacha1.2.png', alt: 'Photo 2' },
+];
 ---
 <html>
   <body>
@@ -68,14 +74,7 @@ import ContactSidebar from '../components/ContactSidebar.astro';
 <p class="p3"><strong>&mdash; Можно ли снять судимость досрочно?</strong><br /> Да &mdash; по ст. 86 УК РФ суд может снять судимость до истечения сроков погашения при безупречном поведении и возмещении вреда; порядок подачи &mdash; ст. 400 УПК РФ (суд по месту жительства, участие лица обязательно).</p>
 <p class="p3"><strong>&mdash; Когда, через сколько и куда мы должны подать документы?</strong></p>
 <p class="p3">Я рассчитаю вам сроки на консультации и расскажу порядок подачи.</p>
-<table>
-<tbody>
-<tr>
-<td><img src="https://iili.io/KuIuoml.md.png" alt="Постановление по ст. 80 УК РФ" width="400" height="654" /></td>
-<td><img src="https://iili.io/KuIune4.md.png" alt="Постановление по ст. 80 УК РФ" width="400" height="712" /></td>
-</tr>
-</tbody>
-</table>
+<Carousel images={images} />
     </div>
 <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты

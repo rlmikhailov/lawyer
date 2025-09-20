@@ -2,6 +2,28 @@
 import Header from '../components/Header.astro';
 import ContactsMap from '../components/ContactsMap.astro';
 import ContactSidebar from '../components/ContactSidebar.astro';
+import Carousel from '../components/Carousel.astro';
+
+const images = [
+  { src: '/images/advokatug1.png', alt: 'Photo 1' },
+  { src: '/images/advokatug2.png', alt: 'Photo 2' },
+  { src: '/images/advokatug2.2.png', alt: 'Photo 3' },
+  { src: '/images/advokatug3.png', alt: 'Photo 3' },
+  { src: '/images/advokatug3.2.png', alt: 'Photo 3' },
+  { src: '/images/advokatug3.3.png', alt: 'Photo 3' },
+  { src: '/images/advokatug4.png', alt: 'Photo 3' },
+  { src: '/images/advokatug4.2.png', alt: 'Photo 3' },
+  { src: '/images/advokatug5.png', alt: 'Photo 3' },
+  { src: '/images/advokatug5.2.png', alt: 'Photo 3' },
+  { src: '/images/advokatug6.png', alt: 'Photo 3' },
+  { src: '/images/advokatug6.2.png', alt: 'Photo 3' },
+  { src: '/images/advokatug6.3.png', alt: 'Photo 3' },
+  { src: '/images/advokatug7.png', alt: 'Photo 3' },
+  { src: '/images/advokatug7.2.png', alt: 'Photo 3' },
+  { src: '/images/advokatug7.3.png', alt: 'Photo 3' },
+  { src: '/images/advokatug8.png', alt: 'Photo 3' },
+  { src: '/images/advokatug8.2.png', alt: 'Photo 3' },
+];
 ---
 <html>
   <body>
@@ -63,6 +85,7 @@ import ContactSidebar from '../components/ContactSidebar.astro';
 <p class="p5"><b>Призыв к действию</b></p>
 <p class="p3">Если вам предъявлено подозрение по особо тяжкой статье &mdash; действовать нужно немедленно. Свяжитесь со мной по телефону или в WhatsApp &mdash; я дам первичный письменный план действий и организую экстренную защиту в первые 24 часа.</p>
 <p class="p3"><br /><b>Ключевые слова:</b>Адвокат по уголовным делам. Защита при особо тяжких преступлениях &mdash; убийство, тяжкий вред, сексуальные преступления, адвокат по убийствам, адвокат по ст.111 УК, адвокат по ст. 131 УК.</p>
+<Carousel images={images} />
 </div>
 <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты

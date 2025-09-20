@@ -2,6 +2,12 @@
 import Header from '../components/Header.astro';
 import ContactsMap from '../components/ContactsMap.astro';
 import ContactSidebar from '../components/ContactSidebar.astro';
+import Carousel from '../components/Carousel.astro';
+
+const images = [
+  { src: '/images/advokatgrazhd1.png', alt: 'Photo 1' },
+  { src: '/images/advokatgrazhd1.2.png', alt: 'Photo 2' },
+];
 ---
 <html>
   <body>
@@ -60,6 +66,7 @@ import ContactSidebar from '../components/ContactSidebar.astro';
 <p class="p3">Ответ: Гарантировать исход судебного дела невозможно &mdash; это зависит от многих факторов. Но я гарантирую профессиональную защиту ваших интересов, использование всех законных способов достижения цели и честную оценку перспектив с самого начала.</p>
 <p class="p3"><b>Как подготовиться к первой консультации?</b><b></b></p>
 <p class="p3">Пришлите все имеющиеся документы: договоры, письма, протоколы, исковые материалы, свидетельства. Чем полнее пакет &mdash; тем точнее оценка.</p>
+<Carousel images={images} />
     </div>
 <div class="divider" style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px 40px;" id="Contacts">
   Контакты
