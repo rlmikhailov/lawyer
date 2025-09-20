@@ -1,8 +1,0 @@
-<svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scales of justice icon">
-  <rect width="64" height="64" fill="white" />
-  <path d="M32 4V60" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/>
-  <path d="M20 20L32 4L44 20" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/>
-  <path d="M14 32H50" stroke="#555" stroke-width="3" stroke-linecap="round"/>
-  <path d="M20 32L14 44L26 44L20 32Z" fill="#0077cc" stroke="#555" stroke-width="2"/>
-  <path d="M44 32L38 44L50 44L44 32Z" fill="#0077cc" stroke="#555" stroke-width="2"/>
-</svg>

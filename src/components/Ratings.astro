@@ -13,6 +13,20 @@
     /* move iframe 30px down from centered position */
     transform: translateY(70px);
   }
+  @media (max-width: 700px) {
+  .iframe-container {
+    height: auto;           /* let container shrink to iframe */
+    padding-top: 20px;      /* optional small gap */
+  }
+  iframe {
+    width: 90vw;            /* make responsive width */
+    height: calc(90vw * (824 / 528)); /* keep aspect ratio */
+    transform: translateY(20px); /* reduce vertical shift */
+    max-width: 528px;
+    max-height: 824px;
+  }
+}
+
 </style>
 
 <div class="iframe-container">
